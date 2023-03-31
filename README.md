@@ -110,6 +110,7 @@ Y ahora subiremos las imagenes mediante el comando
 
 ```
 docker push carolcely14/parcialarep-2:latest
+```
 
 ![image](https://user-images.githubusercontent.com/63822072/229216107-d5c46abf-1e2b-414b-8205-5fd10c88b9a1.png)
 
@@ -134,6 +135,7 @@ Procederemos a actualizar el sistema mediante el comando
 ```
 sudo yum update
 ```
+
 Y a descargar docker en nuestra instancia de EC2 mediante el comando
 
 ```
@@ -151,9 +153,12 @@ y cambiar los permisos de usuario del usuario user-ec2 con el siguiente comando:
 ```
 sudo usermod -a -G docker ec2-user
 ```
+
 Nos desconectaremos de la instancia de EC2 con exit para que los cambios surtan efecto, y nos volveremos a conectar para descargar las imágenes de DockerHub y ejecutarlas mediante el siguiente comando:
 
+```
 docker run -d -p 42000:6000 --name firstdockerimageaws carolcely14/parcialarep-2
+```
 
 y mediante la direccion podremos acceder al servicio desplegado mediante la pagina web
 
@@ -166,6 +171,10 @@ Finalmente hacemos cualquier consulta:
 ![image](https://user-images.githubusercontent.com/63822072/229217013-d692a05b-499b-4e95-8764-928781109a24.png)
 
 ![image](https://user-images.githubusercontent.com/63822072/229217054-e89c5d4d-913f-4bcc-b839-ffdb9f011efe.png)
+
+### Video prueba
+
+https://www.youtube.com/watch?v=IP0xEUXi4YE
 
 ****
 ### :chart_with_downwards_trend: Prerrequisitos
